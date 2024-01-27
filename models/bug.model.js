@@ -13,7 +13,6 @@ const bugSchema = mongoose.Schema({
     type: String,
     validate: {
       validator: (value) => {
-        // Simple URL validation
         const urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
         return urlRegex.test(value);
       },
